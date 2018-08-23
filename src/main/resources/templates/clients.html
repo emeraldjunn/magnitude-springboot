@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments/layout :: head">
+</head>
+<body class="stretched dark  side-push-panel side-panel-right sticky-responsive-menu device-xxs">
+
+<div id="side-panel" class="dark">
+	<div th:replace="fragments/layout :: closePanel"></div>
+	<div th:replace="fragments/layout :: mobileMenu"></div>
+		
+</div>
+<div id="wrapper" class="clearfix">
+			
+	<header th:replace="fragments/layout :: headNav"></header>
+	
+	<style>
+	   body {
+	    	background-color: #383838 !important;
+		}
+		#content,.dark #header.transparent-header {background-color: [(${settings.get('bgColor')})] !important; }
+		
+	</style>
+	
+	<section id="content" class="full-screen"  style="background-color:[(${settings.get('bgColor')})] ">
+		<div class="content-wrap h-100">
+			<div class="container clearfix h-100">
+				<div class="row clearfix h-100">
+					<div class="col-xl-8 justify-content-center align-self-center">
+							<span class='display-1 bold linepoint9'>[[${settings.get('title')}]] </span>
+							<p class='myLead neg5 line-1point3'>[[${settings.get('description')}]] </p>
+					</div>
+				</div>
+			</div>
+			<a href="#" data-scrollto=".clients" data-offset="0" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+		</div>
+	</section>
+	
+	<style >
+
+		.client_img {
+			background-size: cover;
+		}
+		[(${styles})]
+		
+	</style>
+	[(${section})]
+	<footer th:replace="fragments/layout :: footer"></footer>
+</div>
+
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+</body >
+</html>
+<addons th:replace="fragments/layout :: addons"></addons>
+<dotscroll th:replace="fragments/layout :: dotscroll"></dotscroll>

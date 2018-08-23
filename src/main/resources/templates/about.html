@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments/layout :: head">
+</head>
+<body class="stretched dark  side-push-panel side-panel-right sticky-responsive-menu device-xxs">
+
+<div id="side-panel" class="dark">
+	<div th:replace="fragments/layout :: closePanel"></div>
+	<div th:replace="fragments/layout :: mobileMenu"></div>
+		
+</div>
+<div id="wrapper" class="clearfix">
+			
+	<header th:replace="fragments/layout :: headNav"></header>
+	
+	<style>
+		body {
+	    	background-color: #41a69e !important;
+		}
+		.dark #header.transparent-header {background-color:  }
+		.slider-caption p {
+			margin-top:-10px !important;
+		}
+
+
+		@media (max-width: 991px)
+		{
+			#page-menu {display:none;}
+			.display-3 {
+			    font-size: 3rem;
+			    font-weight: 300;
+			    line-height: 1;
+			}
+		}
+		.slider-caption, .flex-caption {
+		    max-width: 850px;
+		}
+		
+
+	</style>
+	<!-- Page Sub Menu
+		============================================= -->
+		<div id="page-menu" class="dots-menu"  style=" z-index:1002;">
+			<div id="page-menu-wrap">
+				<div class="container clearfix">
+					<div class="menu-title">Explore <span>TEAM</span></div>
+					<div class='dotmenu'>
+		                <ul>
+		                    <li><a href=".team_page" class="dot" data-offset="0"><span>Team</span></a></li>
+		                    <li><a href=".hussein_page" class="dot"  data-offset="150"><span>Hussein</span></a></li>
+		                    <li><a href=".sam_page" class="dot"  data-offset="150"><span>Samantha</span></a></li>
+		                    <li><a href=".claire_page" class="dot"  data-offset="150"><span>Claire</span></a></li>
+		                    <li><a href=".lishaa_page" class="dot"  data-offset="150"><span>Lishaa</span></a></li>
+							<li><a href=".rangana_page" class="dot"  data-offset="150"><span>Rangana</span></a></li>
+							<li><a href=".junn_page" class="dot"  data-offset="150"><span>Junn</span></a></li>
+							<li><a href=".chesley_page" class="dot"  data-offset="150"><span>Chesley</span></a></li>
+							<li><a href=".work_page" class="dot"  data-offset="0"><span>Work&nbsp;with&nbsp;us</span></a></li>
+		                </ul>
+		            </div>
+					<div id="page-submenu-trigger"><i class="icon-reorder"></i></div>
+				</div>
+			</div>
+		</div><!-- #page-menu end -->
+	<!-- Page is for Mobile
+		============================================= -->
+		<div class='isMobile'>	
+				
+			<section id="content" class="full-screen"  style="background-color:#41A69E">
+				<div class="content-wrap h-100">
+					<div class="container clearfix justify-content-center align-self-center">
+						<div class="row clearfix">
+							<div class="col-xl-8 pad-top80">
+								
+									<span class='display-1 bold linepoint9'>[[${settings.get('title')}]]</span>
+									<p class='myLead line-1point3 neg5'>[[${settings.get('description')}]]</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" data-scrollto=".team_page1" data-offset="0" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+				</div>
+			</section>
+			<section id="content" class="screen-size "  th:style="'background-color:'+${teamColor }">
+				<div class="content-wrap h-100">
+					<div class="container clearfix h-100">
+						<div class="row clearfix h-100">
+							<div class="col-xl-12 justify-content-center align-self-center">
+								<span class='display-1 bold linepoint9'>TEAM</span>
+								<p class='myLead line-1point3 neg5'></p>
+							</div>
+						</div>
+					</div>
+					<a href="#" data-scrollto=".work" data-offset="0" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+				</div>
+			</section>
+			<!--hussein mobile-->
+			<section id="content"   th:style="'background-color:'+${ hussein.get('background-color') }">
+				<div class="content-wrap">
+					<div class="container clearfix">
+						<div class="row">
+							<div class="col-xl-12">
+								<img src="images/hussein_mobile.png"/>
+							</div>
+							<div class="col-xl-12">
+								<span class='display-3 bold'>[[${hussein.get('first-name')}]]  </span><br/>
+										<span class='display-3 ultralight linepoint5'>[[${hussein.get('last-name')}]]  </span>
+									<p class="h4 ">[[${hussein.get('designation')}]]  </p>
+									<p class="h5">[[${hussein.get('jobdescription')}]]  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--sam mobile #ffcc32-->
+			<section id="content"   th:style="'background-color:'+${ samantha.get('background-color') }">
+				<div class="content-wrap">
+					<div class="container clearfix">
+						<div class="row">
+							<div class="col-xl-12">
+								<img src="images/sam_mobile.png"/>
+							</div>
+							<div class="col-xl-12">
+								<span class='display-3 bold'>[[${samantha.get('first-name')}]]  </span><br/>
+										<span class='display-3 ultralight linepoint5'>[[${samantha.get('last-name')}]]  </span>
+									<p class="h4 ">[[${samantha.get('designation')}]]  </p>
+									<p class="h5">[[${samantha.get('jobdescription')}]]  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--claire mobile-->
+			<section id="content"   th:style="'background-color:'+${ claire.get('background-color') }">
+				<div class="content-wrap">
+					<div class="container clearfix">
+						<div class="row">
+							<div class="col-xl-12">
+								<img src="images/claire_mobile.png"/>
+							</div>
+							<div class="col-xl-12">
+								<span class='display-3 bold'>[[${claire.get('first-name')}]]  </span><br/>
+										<span class='display-3 ultralight linepoint5'>[[${claire.get('last-name')}]]  </span>
+									<p class="h4 ">[[${claire.get('designation')}]]  </p>
+									<p class="h5">[[${claire.get('jobdescription')}]]  </p>
+		<br/>&nbsp;
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--lishaa mobile-->
+			<section id="content"   th:style="'background-color:'+${ lishaa.get('background-color') }">
+
+				<div class="content-wrap">
+						<!--justify-content-center align-self-center-->
+					<div class="container clearfix">
+						<div class="row">
+
+							<div class="col-xl-12">
+								<img src="images/lishaa_mobile.png"/>
+							</div>
+							<div class="col-xl-12">
+								<span class='display-3 bold'>[[${lishaa.get('first-name')}]]  </span><br/>
+										<span class='display-3 ultralight linepoint5'>[[${lishaa.get('last-name')}]]  </span>
+									<p class="h4 ">[[${lishaa.get('designation')}]]  </p>
+									<p class="h5">[[${lishaa.get('jobdescription')}]]  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<!--rangana mobile-->
+			<section id="content"   th:style="'background-color:'+${ rangana.get('background-color') }">
+
+				<div class="content-wrap">
+						<!--justify-content-center align-self-center-->
+					<div class="container clearfix">
+						<div class="row">
+
+							<div class="col-xl-12">
+								<img src="images/rangana_mobile.png"/>
+							</div>
+							<div class="col-xl-12">
+								<span class='display-3 bold'>[[${rangana.get('first-name')}]]  </span><br/>
+										<span class='display-3 ultralight linepoint5'>[[${rangana.get('last-name')}]]  </span>
+									<p class="h4 ">[[${rangana.get('designation')}]]  </p>
+									<p class="h5">[[${rangana.get('jobdescription')}]]  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--junn mobile-->
+			<section id="content" th:style="'background-color:'+${ junn.get('background-color') }">
+
+				<div class="content-wrap">
+						<!--justify-content-center align-self-center-->
+					<div class="container clearfix">
+						<div class="row">
+
+							<div class="col-xl-12">
+								<img src="images/junn_mobile.png"/>
+							</div>
+							<div class="col-xl-12">
+								<span class='display-3 bold'>[[${junn.get('first-name')}]]  </span><br/>
+										<span class='display-3 ultralight linepoint5'>[[${junn.get('last-name')}]]  </span>
+									<p class="h4 ">[[${junn.get('designation')}]]  </p>
+									<p class="h5">[[${junn.get('jobdescription')}]]  </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--chelsey mobile-->
+			<section id="content"  th:style="'background-color:'+${ chesley.get('background-color') }">
+
+				<div class="content-wrap">
+						<!--justify-content-center align-self-center-->
+					<div class="container clearfix">
+						<div class="row">
+
+							<div class="col-xl-12">
+								<img src="images/chelsey_mobile.png"/>
+							</div>
+							<div class="col-xl-12">
+								<span class='display-3 bold'>[[${chesley.get('first-name')}]]  </span><br/>
+										<span class='display-3 ultralight linepoint5'>[[${chesley.get('last-name')}]]  </span>
+									<p class="h4 ">[[${chesley.get('designation')}]]  </p>
+									<p class="h5">[[${chesley.get('jobdescription')}]]  </p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--#work with us mobile-->
+			<section id="content" class="full-screen"  style="background-color:#FF672E ">
+
+				<div class="content-wrap h-100">
+						<!--justify-content-center align-self-center-->
+					<div class="container clearfix justify-content-center align-self-center">
+						<div class="row clearfix">
+
+							<div class="col-xl-12 pad-top80">
+								<!--Our Expertise and Skills:-->
+									<span class='display-1 bold linepoint9'>[(${settings.get('title2')})]</span>
+									
+									<p class='myLead'>[(${settings.get('description2')})]</p>
+								
+							</div>
+						</div>
+
+					</div>
+					<a href="#" data-scrollto=".work" data-offset="0" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+				</div>
+			</section>
+
+		</div>
+<!-- Page is for Desktop
+		============================================= -->
+		<div class='isDesktop'>	
+			<section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix about">
+			<div class="slider-parallax-inner">
+
+				<div class="swiper-container swiper-parent">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide dark" style="background-color:#41A69E">
+							<div class="container clearfix">
+								<div class="slider-caption slider-caption-left">
+									<span class='display-1 bold'>[[${settings.get('title')}]]</span>
+									<p class='myLead'>[[${settings.get('description')}]]</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<a href="#" data-scrollto=".team_page"  data-offset="0" class="dark one-page-arrow "><i class="icon-angle-down infinite animated fadeInDown" ></i></a>	
+			</div>
+		</section>
+		<section id="slider" class="full-screen slider-parallax team_page" th:style="'background-color:'+${teamColor }+'; z-index:100; '">
+					<!--<div style="background-color:#543099; position:absolute; right:0px; left:0px; height:130px"></div>-->
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+							<!--justify-content-center align-self-center-->
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						<div class="col-xl-12  justify-content-center align-self-center" style='background:transparent; position:relative'>
+									<span class='display-1 bold'>TEAM</span>
+									<p class='myLead'></p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Content
+				============================================= -->
+				
+		<section id="slider" class="content-team full-screen slider-parallax hussein_page" th:style="'background-color:'+${ hussein.get('background-color')  }+'; z-index:100; '">
+			
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+					<!--justify-content-center align-self-center-->
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						<div class="col-xl-6 col-md-6  text-center align-bottom" style='background:transparent; position:relative'>
+							<img class="hussein" src="images/hussein.png" style="background:transpaarent; z-index:300; position:absolute;top:0px;left:0"/>
+						</div>
+						<div class="col-xl-6 col-md-6   justify-content-center align-self-center">
+								
+								<span class='display-3 bold'>[[${hussein.get('first-name')}]] </span><br/>
+								<span class='display-3 ultralight linepoint5'>[[${hussein.get('last-name')}]]  </span>
+							<p class="h4 ">[[${hussein.get('description')}]] </p>
+							<p class="h5 ">[[${hussein.get('jobdescription')}]]</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="slider" class="content-team full-screen slider-parallax sam_page" th:style="'background-color:'+${ samantha.get('background-color')  }+'; z-index:350; '">
+			<!--<div style="z-index:500;background-color:#d33155; position:absolute; right:0px; left:0px; height:130px"></div>-->
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+					<!--justify-content-center align-self-center-->
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						
+						<div class="col-xl-6 col-md-6  justify-content-center align-self-center">
+								
+								<span class='display-3 bold'>[[${samantha.get('first-name')}]] </span><br/>
+								<span class='display-3 ultralight linepoint5'>[[${samantha.get('last-name')}]]  </span>
+							<p class="h4 ">[[${samantha.get('description')}]] </p>
+							<p class="h5 ">[[${samantha.get('jobdescription')}]]</p>
+
+						</div>
+
+						<div class="col-xl-6 col-md-6 text-center align-bottom" style='background:transparent; position:relative'>
+							<img class="sam" src="images/sam.png" style="background:transpaarent; z-index:200; position:absolute;top:0px;left:0"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+				
+		<section id="slider" class="content-team full-screen slider-parallax claire_page" th:style="'background-color:'+${ claire.get('background-color')  }+'; z-index:400; '">
+			<!--<div style="background-color:#543099; position:absolute; right:0px; left:0px; height:130px"></div>-->
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+					<!--justify-content-center align-self-center-->
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						<div class="col-xl-6 col-md-6 text-center align-bottom" style='background:transparent; position:relative'>
+							<img class="claire" src="images/claire.png" style="background:transpaarent; z-index:600; position:absolute;top:0px;left:0"/>
+						</div>
+						<div class="col-xl-6 col-md-6  justify-content-center align-self-center">
+								
+								<span class='display-3 bold'>[[${claire.get('first-name')}]] </span><br/>
+								<span class='display-3 ultralight linepoint5'>[[${claire.get('last-name')}]]  </span>
+							<p class="h4 ">[[${claire.get('description')}]] </p>
+							<p class="h5 ">[[${claire.get('jobdescription')}]]</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        <!--#8ec13f-->
+		<section id="slider" class="content-team full-screen slider-parallax lishaa_page" th:style="'background-color:'+${ lishaa.get('background-color')  }+'; z-index:450; '">
+			<!--<div style="z-index:500;background-color:#d33155; position:absolute; right:0px; left:0px; height:130px"></div>-->
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+					<!--justify-content-center align-self-center-->
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						
+						<div class="col-xl-6 col-md-6  justify-content-center align-self-center">
+								
+								<span class='display-3 bold'>[[${lishaa.get('first-name')}]] </span><br/>
+								<span class='display-3 ultralight linepoint5'>[[${lishaa.get('last-name')}]]  </span>
+							<p class="h4 ">[[${lishaa.get('description')}]] </p>
+							<p class="h5 ">[[${lishaa.get('jobdescription')}]]</p>
+
+						</div>
+
+						<div class="col-xl-6 col-md-6 text-center align-bottom" style='background:transparent; position:relative'>
+							<img class="lishaa" src="images/lishaa.png" style="background:transpaarent; z-index:650; position:absolute;top:0px;left:0"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="slider" class="content-team full-screen slider-parallax rangana_page" th:style="'background-color:'+${ rangana.get('background-color')  }+'; z-index:700; '">
+			<!--<div style="background-color:#543099; position:absolute; right:0px; left:0px; height:130px"></div>-->
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+					<!--justify-content-center align-self-center-->
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						<div class="col-xl-6 col-md-6 text-center align-bottom" style='background:transparent; position:relative'>
+							<img class="ranga" src="images/ranga.png" style="background:transpaarent; z-index:750; position:absolute;top:0px;left:0"/>
+						</div>
+						<div class="col-xl-6 col-md-6  justify-content-center align-self-center">
+								
+								<span class='display-3 bold'>[[${rangana.get('first-name')}]] </span><br/>
+								<span class='display-3 ultralight linepoint5'>[[${rangana.get('last-name')}]]  </span>
+							<p class="h4 ">[[${rangana.get('description')}]] </p>
+							<p class="h5 ">[[${rangana.get('jobdescription')}]]</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section id="slider" class="content-team full-screen slider-parallax junn_page" th:style="'background-color:'+${ junn.get('background-color')  }+'; z-index:800; '">
+			<!--<div style="z-index:500;background-color:#d33155; position:absolute; right:0px; left:0px; height:130px"></div>-->
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+					<!--justify-content-center align-self-center-->
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						
+						<div class="col-xl-6 col-md-6  justify-content-center align-self-center">
+								
+								<span class='display-3 bold'>[[${junn.get('first-name')}]] </span><br/>
+								<span class='display-3 ultralight linepoint5'>[[${junn.get('last-name')}]]  </span>
+							<p class="h4 ">[[${junn.get('description')}]] </p>
+							<p class="h5 ">[[${junn.get('jobdescription')}]]</p>
+
+						</div>
+
+						<div class="col-xl-6 col-md-6 text-center align-bottom" style='background:transparent; position:relative '>
+							<img class="junn" src="images/junn.png" style="background:transpaarent; z-index:850; position:absolute;top:0px;left:0"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	
+		<section id="slider" class="content-team full-screen slider-parallax chesley_page" th:style="'background-color:'+${chesley.get('background-color')  }+'; z-index:860; '">
+			<div class="content-wrap notopmargin h-100" style='padding:40px 0px 0px 0px'>
+				<div class="container clearfix h-100">
+					<div class="row clearfix h-100">
+						<div class="col-xl-6 col-md-6 text-center align-bottom" style='background:transparent; position:relative'>
+							<img class="chesley" src="images/chesley.png" style="background:transparent; z-index:870; position:absolute;top:0px;left:0"/>
+						</div>
+						<div class="col-xl-6 col-md-6  justify-content-center align-self-center">
+								<span class='display-3 bold'>[[${chesley.get('first-name')}]] </span><br/>
+								<span class='display-3 ultralight linepoint5'>[[${chesley.get('last-name')}]]  </span>
+							<p class="h4 ">[[${chesley.get('description')}]] </p>
+							<p class="h5 ">[[${chesley.get('jobdescription')}]]</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="content" class="content  work_page" style="background-color:#ff672e;z-index:900;">
+				<div class="content-wrap ">
+			
+					<div class="container clearfix ">
+						<div class="row clearfix ">
+
+							<div class="col-xl-7  justify-content-center align-self-center">
+								
+									<span class='display-3 bold' style='line-height:0.5'>[(${settings.get('title2')})]</span><br/><br/>
+									<p class='h5 notopmargin neg5' style='line-height:1.2 !important'>[(${settings.get('description2')})]}</p>
+
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>	
+			
+	<footer th:replace="fragments/layout :: footer"></footer>
+</div>
+
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+</body >
+</html>
+<addons th:replace="fragments/layout :: addons"></addons>
+<dotscroll th:replace="fragments/layout :: dotscroll"></dotscroll>

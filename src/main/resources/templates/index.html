@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments/layout :: head">
+</head>
+<body class="stretched dark  side-push-panel side-panel-right sticky-responsive-menu device-xxs">
+
+<div id="side-panel" class="dark">
+	<div th:replace="fragments/layout :: closePanel"></div>
+	<div th:replace="fragments/layout :: mobileMenu"></div>
+		
+</div>
+<div id="wrapper" class="clearfix">
+			
+	<header th:replace="fragments/layout :: headNav"></header>
+	
+	<style>
+	   body {
+	    	background-color: [[${settings.get('bgColor')}]] !important;
+		}
+		#header.sticky-header #header-wrap {
+	    	background-color: rgba(51,51,51,0);
+		}
+	</style>
+	[(${section})]
+	<footer th:replace="fragments/layout :: footer"></footer>
+</div>
+
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+</body >
+</html>
+<addons th:replace="fragments/layout :: addons"></addons>

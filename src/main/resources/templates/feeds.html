@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments/layout :: head">
+</head>
+<body class="stretched dark  side-push-panel side-panel-right sticky-responsive-menu device-xxs">
+
+<div id="side-panel" class="dark">
+	<div th:replace="fragments/layout :: closePanel"></div>
+	<div th:replace="fragments/layout :: mobileMenu"></div>
+		
+</div>
+<div id="wrapper" class="clearfix">
+			
+	<header th:replace="fragments/layout :: headNav"></header>
+	
+	<style>
+		body {
+	    	background-color: #383838 !important;
+		}
+		#content, .dark #header.transparent-header {background-color:[(${settings.get('bgColor')})] !important}
+		.portfolio-item {
+		    padding: 0px ; 
+		}
+		#header.sticky-header #header-wrap {
+	    	background-color: rgba(0,0,0,0.7);
+	    	transition:0.6s;
+		}
+		.portfolio-overlay a {
+		    position: absolute;
+		    top: 0%;
+		    left: 0%;
+		    background-color: #F5F5F5;
+		    width: 95% !important;
+		    height: 40px !important;
+		    margin: 10px;
+		    font-size: 16px;
+		    line-height: 22px;
+		    text-align: left;
+		    color: #444;
+		    border-radius: 0%;
+		    -webkit-backface-visibility: hidden;
+		    padding-left: 0px;
+		}
+		.dark .portfolio-overlay a {
+		    background-color: rgba(255,0,0,0);
+		    color: #FFF;
+		}
+	</style>
+	
+	<section id="content" class="full-screen"  style="background-color:{!! $background_color!!}">
+		<div class="content-wrap h-100">
+			<div class="container clearfix h-100">
+				<div class="row clearfix h-100">
+					<div class="col-xl-12 justify-content-center align-self-center">
+							<span class='display-1 bold linepoint9'>FEEDS</span><br/><span class='display-1 ultralight linepoint9'>& UPDATES</span>
+					</div>
+				</div>
+			</div>
+			<a href="#" data-scrollto=".instagram" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+		</div>
+	</section>
+	
+	<!-- Content
+	============================================= -->
+	<section id="content" class='instagram'  style="background-color:#fff" >
+		<div class="content-wrap  notoppadding" style="margin-left:4px !important; padding-top:6px !important">
+			<div id="instafeed" class="portfolio grid-container clearfix">
+			<!-- Portfolio Items
+			============================================= -->
+			</div>
+		</div>
+	</section><!-- #content end -->
+	<blockquote id="instagram-post" class="instagram-media hidden">
+	    <div style="padding:8px;">
+	        <div class="ehInfo">
+	          <a class="ehInfoUsername" href="http://instagram.com/wicked_uae/" target="_blank">
+	          <img src="images/logo_white.svg" style="height:50px"/></a>  
+	          <a id="btn-follow" href="https://www.instagram.com/magnitudeadvertising/" target="_blank" class="pull-right">Follow</a>
+	        </div>
+	        <div class="instagram-header">
+	            <a id="instagram-post-link" href="" target="_blank"><img src="" id="instagram-image" pagespeed_url_hash="2991696875" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
+	        </div>
+	        <p class="instagram-caption"></p>
+	        <p class="text-bold"><span class="instagram-likes"></span> likes<span class="instagram-comments"></span> comments</p>
+	    </div>
+	</blockquote>
+	<footer th:replace="fragments/layout :: footer"></footer>
+</div>
+
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+</body >
+</html>
+<addons th:replace="fragments/layout :: addons"></addons>
+<script type="text/javascript" >
+		function fixFeeds() 
+		{
+		    $("#instafeed a").each(
+		        function() {
+		            $(this).addClass("venobox");
+		            $(this).attr("data-type","inline");
+		            $(this).attr("href","#instagram-post");
+		            $(this).prepend('<div class="video-overlay"><div class="icn-zoom"></div><div class="icn-play-border"></div></div>');
+		            $("#instafeed").delay(500).animate({opacity:1},1000);
+		        }
+		    );
+		    $('.venobox').venobox({
+		        framewidth:'658px',
+		        frameheight: '100%',       // default: ''
+		        border: '10px',             // default: '0'
+		        bgcolor: '#fff',         // default: '#fff'
+		        titleattr: 'data-title',    // default: 'title'
+		        numeratio: false,            // default: false
+		        infinigall: false,            // default: false
+		        overlayClose:false}); 
+
+		    $("#instafeed a").click(function() {
+		    	jpg = $(this).attr("data-image");
+		        $("#instagram-image").attr("src",jpg);
+		        $("#instagram-post-link").attr("href",$(this).attr("data-link"));
+		        $(".instagram-caption").html($(this).attr("data-caption"));
+		        $(".instagram-likes").html($(this).attr("data-likes"));
+		        $(".instagram-comments").html($(this).attr("data-comments"));
+		    });
+		    $("#instafeed").append("<div class='clearfix'></div>");
+		    $("#instafeed").delay(1600).fadeIn(400);
+		}
+	</script>

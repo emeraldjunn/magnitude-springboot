@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Emerald Junn" />
+	<meta http-equiv="Expires" content="30">
+	<link rel="alternate" href="https://magnitude.ae" hreflang="en-us" />
+	
+	<link rel="shortcut icon" th:href="@{/favicon.png}"/>
+	<link rel="mask-icon" th:href="@{/logo-m.svg}"/>
+	
+	<!-- Stylesheets
+	============================================= -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css"  media="all"/>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}" type="text/css"  media="all">
+	
+	<link rel="stylesheet" th:href="@{/style.minify.css}" type="text/css" media="all"/>
+	<link rel="stylesheet" th:href="@{/css/swiper.css}" type="text/css" />
+	<link rel="stylesheet" th:href="@{/css/dark.css}" type="text/css"  media="all"/>
+	<link rel="stylesheet" th:href="@{/css/font-icons.css}" type="text/css"  media="all"/>
+	<!--custom fonts-->
+	<link rel="stylesheet" th:href="@{/css/font-custom.minify.css}" type="text/css"  media="all"/>
+	<link rel="stylesheet" th:href="@{/css/animate.css}" type="text/css" />
+	<link rel="stylesheet" th:href="@{/css/magnific-popup.minify.css}" type="text/css" />
+
+	<link rel="stylesheet" th:href="@{/css/responsive.minify.css}" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" th:href="@{/css/custom.minify.css}" type="text/css" />
+	<link rel="stylesheet" th:href="@{/fonts.css}" type="text/css" />
+	
+	<link rel="stylesheet" th:href="@{/js/venobox/venobox.minify.css}" type="text/css" media="screen" />
+	<link rel="stylesheet" th:href="@{/css/lightbox.min.css}" type="text/css"/>
+	<link rel="stylesheet"  th:href="@{/css/dotmenu.minify.css}"> 
+	<!-- Resource style -->
+
+	<meta name="description" th:content="${settings.get('meta-description')}" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Magnitude Advertising</title>
+</head>
+<body>
+
+
+<div th:fragment="closePanel" id="side-panel-trigger-close" class="side-panel-trigger"><a href="#"><img th:src="@{ /images/close1.png}"  width="30" style='margin-top:15px; margin-right:20px' alt="close"/></a></div>
+
+<div class="side-panel-wrap" th:fragment="mobileMenu">
+	<div class="widget clearfix">
+		<nav class="nav-tree nobottommargin">
+			<ul>
+				<li><a href="/about">ABOUT</a></li>
+				<li><a href="/work">WORK</a></li>
+				<li><a href="/clients">CLIENTS</a></li>
+				
+				<li><a href="/approach">APPROACH</a></li>
+				<li><a href="/expertise">EXPERTISE</a></li>
+				<li><a href="/feeds">FEEDS</a></li>
+				<li><a href="/contact">CONTACT</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+		
+		
+<header th:fragment="headNav" id="header" class="transparent-header full-header static-sticky" data-sticky-class="not-dark">
+	<div id="header-wrap">
+		<div class="container clearfix">
+		
+			<div class="side-panel-trigger fright burger"><img th:src="@{/images/menu1.png}" alt="burger menu" width="30"></div>
+			<div id="logo">
+				<a href="" class="standard-logo" data-dark-logo="images/logo_dark.svg"><img th:src="@{/images/logo_dark.svg}" alt="Magnitude Logo"></a>
+				<a href="" class="retina-logo" data-dark-logo="images/logo_dark.svg"><img th:src="@{/images/logo_dark.svg}" alt="Magnitude Logo"></a>
+			</div>
+			<nav id="primary-menu" class="dark">
+				<ul>
+					 <li><a href="/about"><div>About</div></a></li>
+					<li><a href="/work"><div>Work</div></a></li>
+					<li><a href="/clients"><div>Clients</div></a></li>
+			
+					<li><a href="/approach"><div>Approach</div></a></li>
+					<li><a href="/expertise"><div>Expertise</div></a></li>
+					<li><a href="/feeds"><div>feeds</div></a></li>
+					<li><a href="/contact"><div>Contact</div></a></li> 
+				</ul>
+
+				
+
+			</nav>
+			
+		</div>
+	</div>
+</header>
+
+
+<footer th:fragment="footer" id="footer" class="dark footer-stick">
+		<!-- Copyrights
+		============================================= -->
+		<div id="copyrights">
+			<div class="container-fluid wrapper-fluid clearfix">
+				<div class="row clearfix h-100">
+				<div class="col-md-4 mt-2 justify-content-center align-self-center a-center">
+					Magnitude Advertising LLC. © All rights reserved.
+				</div>
+				<div class="col-md-4 mt-2 isDesktop" style='margin:0 auto; box-sizing: border-box;'>
+					<div class="text-center w-100 b-center" >
+					<a href="tel:+971 4 338 7742" class="social-icon si-borderless si-cloudapp fnone inline" data-toggle="tooltip" data-original-title='Call us'>
+						<i  class='icon-call'></i>
+					    <i  class='icon-call'></i>
+					</a>
+					<a href="mailto:info@magnitude.ae" class="social-icon si-borderless si-cloudapp center-icon fnone inline" data-toggle="tooltip" data-original-title='Email us'>
+						<i  class='icon-email3'></i>
+						<i  class='icon-email3'></i>
+					</a>
+					<a href="https://www.google.ae/maps/place/Magnitude+Advertising/@25.189299,55.2538163,17z/data=!4m12!1m6!3m5!1s0x3e5f69d8f1555569:0xc2e17a2889dd184b!2sMagnitude+Advertising!8m2!3d25.189299!4d55.256005!3m4!1s0x3e5f69d8f1555569:0xc2e17a2889dd184b!8m2!3d25.189299!4d55.256005?hl=en" target="_blank" class="social-icon si-borderless si-cloudapp center-icon fnone inline"  data-toggle="tooltip" data-original-title='Find us'>
+						<i  class='icon-location'></i>
+						<i  class='icon-location'></i>
+					</a>
+					</div>
+				</div>
+				<div class="col-md-12 col_last tleft  mt-2 isMobile">
+					<div class="fleft clearfix">
+
+						<a href="tel:+971 4 338 7742" class="social-icon si-borderless si-cloudapp fnone inline" data-toggle="tooltip" data-original-title='Call us'>
+							<i  class='icon-call'></i>
+						    <i  class='icon-call'></i>
+						</a>
+						<a href="mailto:info@magnitude.ae" class="social-icon si-borderless si-cloudapp center-icon fnone inline" data-toggle="tooltip" data-original-title='Email us'>
+							<i  class='icon-email3'></i>
+							<i  class='icon-email3'></i>
+						</a>
+						<a href="https://www.google.ae/maps/place/Magnitude+Advertising/@25.189299,55.2538163,17z/data=!4m12!1m6!3m5!1s0x3e5f69d8f1555569:0xc2e17a2889dd184b!2sMagnitude+Advertising!8m2!3d25.189299!4d55.256005!3m4!1s0x3e5f69d8f1555569:0xc2e17a2889dd184b!8m2!3d25.189299!4d55.256005?hl=en" target="_blank" class="social-icon si-borderless si-cloudapp center-icon fnone inline"  data-toggle="tooltip" data-original-title='Find us'>
+							<i  class='icon-location'></i>
+							<i  class='icon-location'></i>
+						</a>
+					</div>
+					<div class="fright clearfix tright">
+						<a href="https://www.linkedin.com/company/magnitude-advertising-llc-/?trk=company_name" class="social-icon si-borderless si-cloudapp">
+							<i class="icon-linkedin"></i>
+							<i class="icon-linkedin"></i>
+						</a>
+						<a href="https://www.facebook.com/magnitude.ae" class="social-icon si-borderless si-cloudapp">
+							<i class="icon-facebook"></i>
+							<i class="icon-facebook"></i>
+						</a>
+						<a href="https://www.instagram.com/magnitudeadvertising/" class="social-icon si-borderless si-cloudapp">
+							<!--si-small si-borderless si-instagram-->
+							<i class="icon2-instagram"></i>
+							<i class="icon2-instagram"></i>
+						</a>
+
+					</div>
+				</div>
+				<div class="col-md-4 col_last tright  mt-2 isDesktop">
+					
+					<div class="fright clearfix c-center">
+
+						<a href="https://www.linkedin.com/company/magnitude-advertising-llc-/?trk=company_name" class="social-icon si-borderless si-cloudapp">
+							<i class="icon-linkedin"></i>
+							<i class="icon-linkedin"></i>
+						</a>
+
+						<a href="https://www.facebook.com/magnitude.ae" class="social-icon si-borderless si-cloudapp">
+							<i class="icon-facebook"></i>
+							<i class="icon-facebook"></i>
+						</a>
+
+						
+						<a href="https://www.instagram.com/magnitudeadvertising/" class="social-icon si-borderless si-cloudapp">
+							<i class="icon2-instagram"></i>
+							<i class="icon2-instagram"></i>
+						</a>
+					</div>
+					<div class="clear"></div>
+				</div>
+				</div>
+			</div>
+
+		</div><!-- #copyrights end -->
+	</footer><!-- #footer end -->
+</body>
+</html>
+
+<addons th:fragment="addons">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial|Quicksand:300,400,500,700|Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	
+<!-- External JavaScripts
+============================================= -->
+<script type="text/javascript" th:src="@{/js/jquery.js}"></script>
+<script type="text/javascript" th:src="@{/js/venobox/venobox.min.js}" defer></script>
+
+<script type="text/javascript" th:src="@{/js/plugins.js}" defer></script>
+
+<script type="text/javascript" th:src="@{/js/custom_instagram.js}" ></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script type="text/javascript" th:src="@{/js/functions.minify.js}" defer></script>
+<script type="text/javascript" th:src="@{/js/lightbox.minify.js}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.12.0/lazyload.min.js"></script>
+
+<script type="text/javascript" defer>
+	$(document).ready(function(){
+		var myLazyLoad = new LazyLoad({
+			    elements_selector: ".lazy"
+			});
+        // this part disables the right click
+        $('img').on('contextmenu', function(e) {
+            return false;
+        });
+        //this part disables dragging of image
+        $('img').on('dragstart', function(e) {
+            return false;
+        });
+        // SCREEN MANIPULATION - force screen in fullsize
+		$w = $(window).height();
+		$('.content-about').css('height',$w+'px');
+		height = $(window).height();
+		$('.makeheightfull').css('height',height+18);
+	    $('.makescreen-size').css('height',height-100);
+        $('.screen-size').css('height',$(window).height()-100);
+        $('.screen-size-full').css('height',$(window).height());
+        // Google refresh
+   		$('.maprefresh').click(function(){
+			latitude = 25.1890311;
+			longitude = 55.2556631;
+			var latlng = new google.maps.LatLng(latitude,longitude);
+			google.maps.event.addListener(map, 'resize', function() {
+		        map.setCenter(latlng);
+		    });
+		    google.maps.event.trigger(map, 'resize');
+		});
+   		//putting image on the client logo
+		$( ".clients-grid li" ).each(function( index ) {
+		 	img = $(this).attr('data-img');
+		 	$(this).find("img").css({"background-image":"url(images/clients/" + img + ".png)","background-size":"cover"});
+		});
+		$(window).scroll(function(){
+		
+	        <?php 
+	        if(!isset($isIndex))
+	        {
+	        ?>
+	            if($(window).scrollTop()>=5)
+	             {
+	                $('#header.transparent-header.full-header #logo img').css('margin-top','0px');
+	                $('#primary-menu ul li > a').css('padding','25px 15px 20px'); 
+	            }
+	            else
+	            {
+	                $('#primary-menu ul li > a').css('padding','50px 15px 10px');
+	                $('#header.transparent-header.full-header #logo img').css('margin-top','20px');
+	            }
+	        <?php 
+	        }
+	        ?>
+	        parallax();
+		});
+	});
+    //change the header content position
+ 	
+
+	function parallax()
+	{
+	     var scrolled= $(window).scrollTop();
+	     if($(window).height()>735)
+	     {
+		     	$('.team').css('top',(0-(scrolled*.25))+'px');
+		     	$compute = ((949-736)-($(window).height()-736))/(949-736);
+		     	$times = [250+(  100-(100*($compute) )),
+		     		400+(  150-(150*($compute) )),
+		     		530+(  200-(200*($compute) )),
+		     		720+(  250-(250*($compute) )),
+		     		870+(  300-(300*($compute) )),
+		     		1050+(  350-(350*($compute) )),
+		     		1200+(  400-(400*($compute) ))];
+		     	$plus =  $times[0]/$compute;
+		     	$('.hussein').css('top',($times[0]-(scrolled*.25))+'px');
+		     	$('.sam').css('top',($times[1]-(scrolled*.25))+'px');
+		     	$('.claire').css('top',($times[2]-(scrolled*.25))+'px');
+		     	$('.lishaa').css('top',($times[3]-(scrolled*.25))+'px');
+		     	$('.ranga').css('top',($times[4]-(scrolled*.25))+'px');
+		     	$('.junn').css('top',($times[5]-(scrolled*.25))+'px');
+		     	$('.chesley').css('top',($times[6]-(scrolled*.25))+'px');
+	     }
+	     else
+	     {
+	     	$plus = $(window).height()-734;
+	     	$('.team').css('top',(0-(scrolled*.25))+'px');
+	     	$('.hussein').css('top',(250-(scrolled*.25))+($plus)+'px');
+	     	$('.sam').css('top',(400-(scrolled*.25))+($plus)+'px');
+	     	$('.claire').css('top',(530-(scrolled*.25))+($plus)+'px');
+	     	$('.lishaa').css('top',(700-(scrolled*.25))+($plus)+'px');
+	     	$('.ranga').css('top',(850-(scrolled*.25))+($plus)+'px');
+	     	$('.junn').css('top',(1000-(scrolled*.25))+($plus)+'px');
+	     	$('.chesley').css('top',(1150-(scrolled*.25))+($plus)+'px');
+	     }
+	    
+	    
+	}
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55882096-1"></script>
+<script >
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-55882096-1');
+</script>
+</addons>
+
+<dotscroll  xmlns:th="http://www.thymeleaf.org/" th:fragment="dotscroll">
+<!--Use this script to scroll between pages -->
+<script type="text/javascript">
+    /*!
+     * jquery.scrollto.js 0.0.1 - https://github.com/yckart/jquery.scrollto.js
+     * Scroll smooth to any element in your DOM.
+     *
+     * Copyright (c) 2012 Yannick Albert (http://yckart.com)
+     * Licensed under the MIT license (https://www.opensource.org/licenses/mit-license.php).
+     * 2013/02/17
+     **/
+    $(document).ready(function(){
+
+        $.scrollTo = $.fn.scrollTo = function(x, y, options, offset2){
+            if (!(this instanceof $)) return $.fn.scrollTo.apply($('html, body'), arguments);
+            options = $.extend({}, {
+                gap: {
+                    x: 0,
+                    y: 0
+                },
+                animation: {
+                    easing: 'swing',
+                    duration: 600,
+                    complete: $.noop,
+                    step: $.noop
+                }
+            }, options);
+            return this.each(function(){
+                var elem = $(this);
+                elem.stop().animate({
+                    scrollLeft: !isNaN(Number(x)) ? x : $(y).offset().left + options.gap.x,
+                    scrollTop: !isNaN(Number(y)) ? y : $(y).offset().top + options.gap.y - offset2 
+                }, options.animation);
+            });
+        };
+        var aChildren = $(".dotmenu li").children();
+        var aArray = [];
+        var offsetArray = [];
+        for (var i=0; i < aChildren.length; i++) {    
+            var aChild = aChildren[i];
+            var ahref = $(aChild).attr('href');
+            var offset_page = $(aChild).attr('data-offset');
+            aArray.push(ahref);
+            offsetArray.push(parseInt(offset_page)); 
+            span = $(aChild).find('span');
+            $(span).css("left",-1 *( $(span).width()+55));
+            
+        }     
+        
+        $(window).scroll(function(){
+            var windowPos = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            var docHeight = $(document).height() ;
+            for (var i=0; i < aArray.length; i++) {
+                var theID = aArray[i];
+                var theOffset = offsetArray[i];
+                
+                var divPos = $(theID).offset().top - theOffset; 
+                var divHeight = $(theID).height() - (theID=='.team_page'?offsetArray[i+1]:0); 
+
+                if (windowPos >= (divPos  ) && windowPos < (divPos + divHeight)) {
+                        $("a[href='" + theID + "']").addClass("name-active");
+                } else {
+                    $("a[href='" + theID + "']").removeClass("name-active");
+                }
+                
+            }
+
+        });
+        $(".dotmenu a").click(function(evn){
+            evn.preventDefault();
+            offset = $(this).attr('data-offset');
+            theID = $(this).attr('href');
+            $('html,body').scrollTo($(this).attr('href'), $(this).attr('href'),50,parseInt(offset));
+            $("a[href='" + theID + "']").addClass("name-active");
+        });
+    });
+
+</script>
+</dotscroll>
